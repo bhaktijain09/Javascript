@@ -58,3 +58,23 @@ else if(color === "green")
 else{
     console.log("Traffic light doesn't work");
 }
+
+// Nested if-else - 
+let scoring = 81;
+if(scoring>=35){
+
+    console.log("pass");
+
+    if(scoring>=80) //nested
+        {
+        console.log("Grade is O (outstanding)");
+        }
+    else{
+            console.log("Grade is A")
+        }
+    }
+    
+else{
+console.log("Better Luck Next time!")
+    }
+
