@@ -32,4 +32,12 @@ console.log('a' > 'b'); //false
 console.log('A' < 'B'); //true
 console.log('*' > '&'); //true
 
-// Logical operators => &&, ||
+// Logical operators => &&, ||, ! (AND, OR, NOT) -
+
+// AND - true && true = true others false
+console.log(`The ans is : ${(5>3) && (6<12)}`); // t && t = t
+// OR - false || false = false others true
+console.log(`The ans is : ${(5<3) && (6>12)}`); // f || f = f
+// NOT - !true = false , !false = true
+console.log(!(5>9)); //5>9 is false but its not(!) is true, so ans is true
+console.log(!(5<9)); //5<9 is true but its not(!) is false, so ans is false
