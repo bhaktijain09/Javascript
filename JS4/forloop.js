@@ -1,5 +1,5 @@
 // To print number from 1 to 5 
-for (i=1; i<=5; i++){
+for (let i=1; i<=5; i++){
     console.log(i);
 }
 // output- 
@@ -10,7 +10,7 @@ for (i=1; i<=5; i++){
 // 5
 
 // To print number from 5 to 1 (backwards)
-for (i=5; i>=1; i--){
+for (let i=5; i>=1; i--){
     console.log(i);
 }
 // output- 
