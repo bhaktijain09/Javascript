@@ -21,3 +21,75 @@ for(let i=arr.length-1; i>=0; i--){ // i=lastindex(7), lastindex-1(6), lastindex
 }
  console.log(arr);
 
+// Qs2. find the number of digits in a number.
+// 287152
+
+let nums = 287152;
+let count = 0;
+while (nums > 0) {
+  nums = Math.floor(nums / 10);
+  count++;
+}
+console.log(`Total number of digits is ${count}`);
+
+// or 
+
+let number = 287152;
+let str = number.toString();
+for(i=0; i<str.length; i++){
+  console.log(`The no. ${i+1} digit in the ${number} is ${str[i]}`);
+  console.log(`The total count of digits in a number ${str} is ${str.length}`);
+}
+
+// Qs3. find the sum of digits in a number.
+// 287152
+
+let numbering = 287152; 
+let sums = 0; 
+let copy = numbering; 
+while (copy>0){
+  digit = copy % 10; 
+  sums += digit; 
+  copy = Math.floor(copy/10);
+ }
+ console.log("The sum of all the digits in the number " + numbering + " is: " + sums);
+
+// or 
+
+let numbers = 287152;   //287152 in number/integer datatype
+let Str = numbers.toString(); //287152 in string datatype
+let sum = 0;
+for(let i=0; i<=Str.length-1; i++){
+  // sum = sum + Str[i]; is the logic 
+  sum = sum + Number(Str[i]); // since (Str[i]) is element in string at ith place, Number(Str[i]) converts string back to number/integer type
+} 
+  console.log(`The sum of all the digits in the ${numbers} is ${sum}`);
+
+
+// Qs4. Print the factorial of a number n. 
+// [Factorial of a number n is the product of all positive integers less than or equal to a given positive integer and denoted by that integer.] 
+// Example: 7! (factorial of 7) = 1 x 2 x 3 x 4 x 5 x 6 x 7 = 5040 
+// 5! (factorial of 5) = 1 x 2 x 3 x 4 x 5 = 120 
+// 3! (factorial of 3) = 1 x 2 x 3 = 6 
+// 0! is always 1
+let n = Number(prompt("Enter the number of which you want factorial:"));
+let factorial = 1;
+if (!Number.isInteger(n) || n < 0) { // Number.isInteger(n) checks whether: entered value n is of type number/integer only and not any other value than Number/integer(like NaN or string or some infinity value)
+  console.log("Please enter a non-negative integer.");
+}
+else{
+  for(let i=1; i<=n; i++){
+   factorial = factorial * i;
+  }
+  console.log(`factorial of ${n} is ${factorial}`);
+}
+
+// Qs5. Find the largest number in an array with only positive numbers 
+let array1 = [33,20,100,9,8,7];
+let max = array1[0];
+for(let i=0; i<array1.length; i++){
+  if(array1[i]>max){
+    max = array1[i];
+  }
+}
+    console.log(`max element is ${max}`);
